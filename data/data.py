@@ -9,7 +9,7 @@ if len(KEYS) < 1:
     exit()
 
 with open('data/proxies.txt') as file:
-    PROXIES = zip(KEYS, [x.strip() for x in file.readlines()])
+    PROXIES = dict(zip(KEYS, [x.strip() for x in file.readlines()]))
 
 ARB_ADDRESS=0x912ce59144191c1204e64559fe8253a0e49e6548
 ARB_GOVERNOR_ADDRESS=0x789fc99093b09ad01c34dc7251d0c89ce743e5a4
